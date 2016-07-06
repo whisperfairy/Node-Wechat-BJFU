@@ -9,4 +9,4 @@ const wechatConfig ={
     token:'panghuweiwu',
     appSecret:'e6167cddd49a09d55961882af6838d7f'
 }
-export {wechatConfig}
+export {wechatConfig};
