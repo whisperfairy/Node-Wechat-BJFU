@@ -17,16 +17,17 @@ var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Koa = require('koa');
-var sha1 = require('crypto').createHash('sha1');
+var crypto = require('crypto');
 var app = new Koa();
 var wechat = require('../config/wechatConfig').wechatConfig;
 app.use(function () {
     var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee(ctx, next) {
-        var signature, nonce, timestamp, echostr, content, result;
+        var sha1, signature, nonce, timestamp, echostr, content, result;
         return _regenerator2.default.wrap(function _callee$(_context) {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
+                        sha1 = crypto.createHash('sha1');
                         signature = ctx.query.signature;
                         nonce = ctx.query.signature;
                         timestamp = ctx.query.timestamp;
@@ -45,7 +46,7 @@ app.use(function () {
                             ctx.body = "wrong";
                         }
 
-                    case 11:
+                    case 12:
                     case 'end':
                         return _context.stop();
                 }

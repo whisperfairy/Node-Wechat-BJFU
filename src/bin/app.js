@@ -6,16 +6,16 @@
  */
 'use strict'
 const Koa = require('koa');
-const sha1=require('crypto').createHash('sha1');
+const crypto=require('crypto');
 let app = new Koa();
 const wechat=require('../config/wechatConfig').wechatConfig;
 app.use(async (ctx, next) => {
-
+    const sha1= crypto.createHash('sha1')
     const signature = ctx.query.signature;
     const nonce =ctx.query.signature;
     const timestamp = ctx.query.timestamp;
     const echostr= ctx.query.ecostr;
-    const content= [wechat.token,timestamp,nonce].sort().join("");
+    const content= [wechat.token, timestamp, nonce].sort().join("");
     console.log(ctx.query)
     console.log(signature);
     sha1.update(content);
