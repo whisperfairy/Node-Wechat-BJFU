@@ -33,6 +33,7 @@ app.use(function () {
                         echostr = ctx.query.ecostr;
                         content = [wechat.token, timestamp, nonce].sort().join("");
 
+                        console.log(ctx.query);
                         console.log(signature);
                         sha1.update(content);
                         result = sha1.digest('hex');
@@ -44,7 +45,7 @@ app.use(function () {
                             ctx.body = "wrong";
                         }
 
-                    case 10:
+                    case 11:
                     case 'end':
                         return _context.stop();
                 }

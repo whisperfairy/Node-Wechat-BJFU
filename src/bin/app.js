@@ -16,6 +16,7 @@ app.use(async (ctx, next) => {
     const timestamp = ctx.query.timestamp;
     const echostr= ctx.query.ecostr;
     const content= [wechat.token,timestamp,nonce].sort().join("");
+    console.log(ctx.query)
     console.log(signature);
     sha1.update(content);
     const result = sha1.digest('hex');
