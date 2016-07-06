@@ -1,6 +1,7 @@
 /**
  * Created by whisp_000 on 2016/5/27.
  */
+"use strict"
 const path = require('path');
 function filepath(filepath){
   let filename = path.basename(filepath);
