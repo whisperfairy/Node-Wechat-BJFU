@@ -5,7 +5,8 @@
  *  Time:  21:24
  */
 const wechatConfig ={
-    appID:'gh_df2e5c1264be',
+    appID:'wx233432402c749442',
     token:'panghuweiwu',
-    appSecret:'Ac1riIe6lCFzGTFhvc0W9aRKN4yw9Mya1EV2OpI2dyF'
+    appSecret:'e6167cddd49a09d55961882af6838d7f'
 }
+export {wechatConfig}
