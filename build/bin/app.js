@@ -27,23 +27,24 @@ app.use(function () {
             while (1) {
                 switch (_context.prev = _context.next) {
                     case 0:
-                        console.log(ctx);
                         signature = ctx.query.signature;
                         nonce = ctx.query.signature;
                         timestamp = ctx.query.timestamp;
                         echostr = ctx.query.ecostr;
                         content = [wechat.token, timestamp, nonce].sort().join("");
 
+                        console.log(signature);
                         sha1.update(content);
                         result = sha1.digest('hex');
 
+                        console.log(result);
                         if (result == signature) {
                             ctx.body = echostr + "";
                         } else {
                             ctx.body = "wrong";
                         }
 
-                    case 9:
+                    case 10:
                     case 'end':
                         return _context.stop();
                 }
