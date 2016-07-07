@@ -29,7 +29,7 @@ app.use(function () {
                     case 0:
                         sha1 = crypto.createHash('sha1');
                         signature = ctx.query.signature;
-                        nonce = ctx.query.signature;
+                        nonce = ctx.query.nonce;
                         timestamp = ctx.query.timestamp;
                         echostr = ctx.query.ecostr;
                         content = [wechat.token, timestamp, nonce].sort().join("");
