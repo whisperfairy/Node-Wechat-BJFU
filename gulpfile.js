@@ -37,8 +37,9 @@ gulp.task('es6',[],function()
         files.map((item) => {
             var watcher = gulp.watch(item.toString(),
                 function(event) {
+                var result=helper.filepath(event.path);
                     return gulp.src(event.path.toString())
-                        .pipe(sourcemaps.init({loadMaps: true,debug:true}))
+                        .pipe(sourcemap.init({loadMaps: true,debug:true}))
                         .pipe(babel())
                         .pipe(sourcemap.write(__dirname+'./maps'))
                         .pipe(gulp.dest('./build/' + result.folderPath));

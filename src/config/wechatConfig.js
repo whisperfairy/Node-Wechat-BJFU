@@ -8,5 +8,6 @@ const wechatConfig ={
     appID:'appid',
     token:'token',
     appSecret:'appsecret'
-}
+};
+
 export {wechatConfig};

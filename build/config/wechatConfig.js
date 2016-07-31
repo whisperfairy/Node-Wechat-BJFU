@@ -14,5 +14,6 @@ var wechatConfig = {
   token: 'token',
   appSecret: 'appsecret'
 };
+
 exports.wechatConfig = wechatConfig;
-//# sourceMappingURL=maps/wechatConfig.js.map
+//# sourceMappingURL=F:/WebstormProjects/Node-Wechat-BJFU./maps/wechatConfig.js.map
