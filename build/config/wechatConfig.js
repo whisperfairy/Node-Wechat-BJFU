@@ -15,3 +15,4 @@ var wechatConfig = {
   appSecret: 'appsecret'
 };
 exports.wechatConfig = wechatConfig;
+//# sourceMappingURL=maps/wechatConfig.js.map
